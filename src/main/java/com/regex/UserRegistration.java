@@ -7,17 +7,41 @@ import java.util.Scanner;
 public class UserRegistration {
 
     public static void main(String[] args) {
+        UserInputValidationUtil registration=new UserInputValidationUtil(); // object of UserInputValidationUtil constructor
+        Scanner sc=new Scanner(System.in);
 
-        UserInputValidationUtil userInputValidationUtil = new UserInputValidationUtil();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter first name: ");
-        String firstName = scanner.next();
-        System.out.println(userInputValidationUtil.isValidFirstName(firstName) ? "Valid" : "In Valid");
-        System.out.println("Enter last name: ");
-        String lastName = scanner.next();
+        while(true) {
+            System.out.println("Enter choice.............\n "
+                    +"1)UserName\n"   //uc1
+                    +"2)LastName\n"
+                    +"3)Email\n"
+                    +"0) exit");
 
-        scanner.close();
+            int choice=sc.nextInt();
 
-        System.out.println(userInputValidationUtil.isValidLastName(lastName) ? "Valid" : "In Valid");
+            switch(choice) {
+
+                //for uc1 calling validateUsername method in this case
+                case 1:
+                    registration.validateUserName();
+                    break;
+
+                 // for uc2 calling validateLastname method in this case
+                case 2:
+                    registration.validateLastName();
+                    break;
+
+                 // for uc3 calling validateEmail method in this case
+                case 3:
+                    registration.validateEmail();
+                    break;
+
+                default:
+                    System.out.println("Invalid choice");
+                    System.exit(0);
+            }
+        }
     }
-}
+
+    }
+
