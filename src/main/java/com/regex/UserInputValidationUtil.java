@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
  * User need to follow pre-defined password rules
     * 1.minimum 8 characters
     * 2.Should have at least one upper case
+    * 3.Should have at least one numeric character
  */
 
 public class UserInputValidationUtil {

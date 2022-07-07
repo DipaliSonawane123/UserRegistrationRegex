@@ -3,6 +3,7 @@ package com.regex;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 /*
      * As a User need to enter a valid FirstName
      * First name starts with Cap and has minimum 3 characters
@@ -13,6 +14,7 @@ import java.io.InputStreamReader;
      *   User need to follow pre-defined password rules
        * 1.minimum 8 characters
        * 2.Should have at least one upper case
+       * 3.Should have at least one numeric character
      */
 
     public class UserRegistration {
@@ -58,10 +60,10 @@ import java.io.InputStreamReader;
                  //11.Taking input from user and storing it in password
                 System.out.println("Please Enter Password: ");
                 String password = bufferedReader.readLine();
-                System.out.println(userInputValidationUtil.isValidPassword(password) ? "Valid" : "InValid");
+                System.out.println(userInputValidationUtil.isValidPassword(password) ? "Valid" : "InValid \n * check for min 8 character and password should contain atleast one upper case and no");
                 break;
                 default:
-                    System.out.println("Sucessfully validate");
+                    System.out.println("exit successful");
 
 
         }
