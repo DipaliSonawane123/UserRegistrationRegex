@@ -60,7 +60,7 @@ public class UserInputValidationUtil {
     public static boolean isValidPassword(String password) {
         System.out.println(password);
 
-        String passwordRegex = "^(?=.*[A-Z]).{8,}$";
+        String passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
 
         Pattern pattern = Pattern.compile(passwordRegex);
 
