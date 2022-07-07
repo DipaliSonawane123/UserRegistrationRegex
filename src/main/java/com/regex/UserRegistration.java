@@ -10,83 +10,59 @@ import java.io.InputStreamReader;
      * Last name starts with Cap and has minimum 3 characters
      * User need to enter a valid email
      * User need to follow pre-defined mobile format
+     *   User need to follow pre-defined password rules
+       * 1.minimum 8 characters
      */
 
     public class UserRegistration {
         public static void main(String[] args) throws IOException {
 
-<<<<<<< HEAD
-    public static void main(String[] args) {
-        UserInputValidationUtil registration=new UserInputValidationUtil(); // object of UserInputValidationUtil constructor
-        Scanner sc=new Scanner(System.in);
-
-        while(true) {
-            System.out.println("Enter choice.............\n "
-                    +"1)UserName\n"   //uc1
-                    +"2)LastName\n"
-                    +"3)Email\n"
-                    +"0) exit");
-
-            int choice=sc.nextInt();
-
-            switch(choice) {
-
-                //for uc1 calling validateUsername method in this case
-                case 1:
-                    registration.validateUserName();
-                    break;
-
-                 // for uc2 calling validateLastname method in this case
-                case 2:
-                    registration.validateLastName();
-                    break;
-
-                 // for uc3 calling validateEmail method in this case
-                case 3:
-                    registration.validateEmail();
-                    break;
-
-                default:
-                    System.out.println("Invalid choice");
-                    System.exit(0);
-            }
-        }
-    }
-
-    }
-
-=======
             UserInputValidationUtil userInputValidationUtil = new UserInputValidationUtil();
 
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-
+            System.out.println("Select 1.firstname 2. lastname 3. email 4. password 5.mobile no 6. exit");
+            String a =bufferedReader.readLine();
+            switch(a){
+                case "1":
                 System.out.println("******* FIRSTNAME VALIDATION *******");
                 //Taking input from user and storing it in firstName
                 System.out.println("Enter first name: ");
                 String firstName = bufferedReader.readLine();
                 System.out.println(userInputValidationUtil.isValidFirstName(firstName)? "Valid" : "InValid");
+              break;
 
+                case "2":
                 System.out.println("******* LASTNAME VALIDATION *******");
                 // Taking input from user and storing it in lastName
                 System.out.println("Enter last name: ");
                 String lastName = bufferedReader.readLine();
                 System.out.println(userInputValidationUtil.isValidLastName(lastName) ? "Valid" : "InValid");
-
-
+                break;
+                case "3":
                 System.out.println("******* EMAIL VALIDATION *******");
                 //Taking input from user and storing it in email
                 System.out.println("Enter email: ");
                 String email = bufferedReader.readLine();
                 System.out.println(userInputValidationUtil.isValidEmail(email) ? "Valid" : "InValid");
-
-
+                break;
+                case "4":
                 System.out.println("******* MOBILE FORMAT VALIDATION *******");
                 //Taking input from user and storing it in mobileNumber
                 System.out.println("Enter Mobile Number: ");
                 String mobileNumber = bufferedReader.readLine();
                 System.out.println(userInputValidationUtil.isValidMobileNumber(mobileNumber) ? "Valid" : "InValid");
+                break;
+                case "5":
+                System.out.println("******* PASSWORD VALIDATION *******");
+                 //11.Taking input from user and storing it in password
+                System.out.println("Please Enter Password: ");
+                String password = bufferedReader.readLine();
+                System.out.println(userInputValidationUtil.isValidPassword(password) ? "Valid" : "InValid");
+                break;
+                default:
+                    System.out.println("Sucessfully validate");
 
 
         }
     }
->>>>>>> UC4_MobileNoValidation
+    }
