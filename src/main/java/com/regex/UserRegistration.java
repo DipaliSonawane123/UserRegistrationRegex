@@ -12,6 +12,7 @@ import java.io.InputStreamReader;
      * User need to follow pre-defined mobile format
      *   User need to follow pre-defined password rules
        * 1.minimum 8 characters
+       * 2.Should have at least one upper case
      */
 
     public class UserRegistration {
@@ -20,7 +21,7 @@ import java.io.InputStreamReader;
             UserInputValidationUtil userInputValidationUtil = new UserInputValidationUtil();
 
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Select 1.firstname 2. lastname 3. email 4. password 5.mobile no 6. exit");
+            System.out.println("Select 1.firstname 2. lastname 3. email 4.Mobile no 5.password 6. exit");
             String a =bufferedReader.readLine();
             switch(a){
                 case "1":
