@@ -3,7 +3,6 @@ package com.regex;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 /*
      * As a User need to enter a valid FirstName
         * First name starts with Cap and has minimum 3 characters
@@ -16,6 +15,7 @@ import java.io.OutputStream;
        * 2.Should have at least one upper case
        * 3.Should have at least one numeric character
        * 4.Has exactly one special character
+      * Should clear all the email samples provided separately
      */
 
     public class UserRegistration {

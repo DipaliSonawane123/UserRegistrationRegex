@@ -15,6 +15,7 @@ import java.util.regex.Pattern;
     * 2.Should have at least one upper case
     * 3.Should have at least one numeric character
     * 4.Has exactly one special character
+ * Should clear all the email samples provided separately
  */
 
 public class UserInputValidationUtil {
@@ -39,7 +40,9 @@ public class UserInputValidationUtil {
 
     public static boolean isValidEmail(String email) {
 
-        String emailRegex = "^[a-z]{3}[a-zA-Z.]{0,}+@+bl.co+[a-z.]{0,}$";
+        String emailRegex = "^[a-zA-Z0-9_+-]+(?:\\.[a-zA-Z0-9_+-]+)*@" +
+                "([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}" +
+                "(?:(\\.([A-Za-z]{2})))?$";;
 
         Pattern pattern = Pattern.compile(emailRegex);
 
