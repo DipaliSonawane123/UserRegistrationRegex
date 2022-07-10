@@ -20,13 +20,6 @@ import java.util.regex.Pattern;
 
 public class UserInputValidationUtil {
     // Creating isValidFirstName to method validate the first name given by user using regex
-    public static boolean isValidFirstName(String firstName) {
-        String firstNameRegex =  "^[A-Z]{1}[a-z]{2,}$";
-        Pattern pattern = Pattern.compile(firstNameRegex);
-        Matcher matcher = pattern.matcher(firstName);
-
-        return matcher.matches();
-    }
 
     //Creating isValidLastName method  to validate the last name given by user using regex
     public static boolean isValidLastName(String lastName) {
@@ -71,6 +64,17 @@ public class UserInputValidationUtil {
         Matcher matcher = pattern.matcher(password);
 
         return matcher.matches();
+    }
+
+    public boolean isValidFirstName(String firstName) {
+      {
+            String firstNameRegex =  "^[A-Z]{1}[a-z]{2,}$";
+            Pattern pattern = Pattern.compile(firstNameRegex);
+            Matcher matcher = pattern.matcher(firstName);
+            Boolean result =matcher.matches();
+            return result;
+        }
+
     }
 }
 
