@@ -24,9 +24,7 @@ public class UserInputValidationUtil {
     
     //method validateFirstName to validate first name using regex using lambda function
     //method return - Validate type
-     
-    @org.jetbrains.annotations.NotNull
-    @org.jetbrains.annotations.Contract(pure = true)
+
     public static Validate validateFirstName() {
         return firstName -> firstName.matches("^[A-Z]{1}[a-z]{2,}$");
     }
